@@ -1,0 +1,77 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: terraform-aws-snstoslack
+
+# Tags of this project
+tags:
+  - aws
+  - terraform
+  - terraform-modules
+  - snstoslack
+
+# Categories of this project
+categories:
+  - terraform-modules/CICD
+
+# Logo for this project
+#logo: docs/slalom-logo.png
+
+# License of this project
+license: "APACHE2"
+
+# Copyrights
+copyrights:
+  - name: "Slalom, LLC"
+    url: "https://slalom.com"
+    year: "2019"
+
+# Canonical GitHub repo
+github_repo: jameswoolfenden/terraform-aws-snstoslack
+
+# Badges to display
+badges:
+  - name: "Build Status"
+    image: "https://api.travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack.svg?branch=master"
+    url: "https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg"
+    url: "https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest"
+
+related:
+  - name: "terraform-aws-codebuild"
+    description: "Making a Build pipeline"
+    url: "https://github.com/jameswoolfenden/terraform-aws-codebuild"
+
+# Short description of this project
+description: |-
+  This module connects sns to slack.
+
+# How to use this project
+usage: |-
+  Include this repository as a module in your existing terraform code:
+
+  ```hcl
+  module "snstoslack" {
+    source            = "JamesWoolfenden/snstoslack/aws"
+    version           = "0.0.2"
+    sns_topic_name    = "slack-topic"
+    slack_webhook_url = "https://hooks.slack.com/services/AAA/BBB/CCC"
+    slack_channel     = "aws-notification"
+    slack_username    = "reporter"
+  }
+  ```
+
+include:
+  - "docs/usage.md"
+  - "docs/targets.md"
+  - "docs/terraform.md"
+
+# Contributors to this project
+contributors:
+  - name: "James Woolfenden"
+    github: "jameswoolfenden"
