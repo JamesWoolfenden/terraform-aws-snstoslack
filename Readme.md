@@ -86,7 +86,6 @@ Available targets:
 | notify_slack_lambda_function_version       | Latest published version of your Lambda function                   |
 | this_slack_topic_arn                       | The ARN of the SNS topic from which messages will be sent to Slack |
 
-
 ## Related Projects
 
 Check out these related projects.
