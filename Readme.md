@@ -41,22 +41,6 @@ Do not abuse this power pls.
  aws-vault exec test --  aws cloudwatch set-alarm-state --alarm-name "JenkinsCPUMaxout" --state-value ALARM --state-reason "I LIKE SHOUTING"
 ```
 
-## Makefile Targets
-
-```bash
-Available targets:
-
-  help/all:
-                          Display help for all targets
-  help/short:
-                        This help short screen
-  help:
-                              Help screen
-  lint:
-                              Lint terraform code
-
-```
-
 ## Inputs
 
 | Name                 | Description                                                     |  Type  |    Default     | Required |
@@ -98,9 +82,6 @@ Check out these related projects.
 
 File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-snstoslack/issues).
 
-## Slack Community
-
-You can join the Cloudposse community [Open Source Community][slack] on Slack.
 
 ## Contributing
 
@@ -137,18 +118,16 @@ See [LICENSE](LICENSE) for full details.
 
 ### Contributors
 
-|  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
-|---|
+  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+
 
   [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
   [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 
+[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 
-
-[logo]: docs/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[slack]: https://cpco.io/slack
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
 
