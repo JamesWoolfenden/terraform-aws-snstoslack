@@ -8,8 +8,6 @@ This module connects sns to slack.
 
 ---
 
-This project uses the "build-harness" a modified version of the project ["SweetOps"](https://cpco.io/sweetops) from Cloudposse. Sweet indeed.
-
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
@@ -19,7 +17,7 @@ Include this repository as a module in your existing terraform code:
 ```hcl
 module "snstoslack" {
   source            = "JamesWoolfenden/snstoslack/aws"
-  version           = "0.0.2"
+  version           = "0.1.4"
   sns_topic_name    = "slack-topic"
   slack_webhook_url = "https://hooks.slack.com/services/AAA/BBB/CCC"
   slack_channel     = "aws-notification"
