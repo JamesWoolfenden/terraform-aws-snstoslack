@@ -1,5 +1,5 @@
-common_tags={
-    name="SNS"
+common_tags = {
+  name = "SNS"
 }
 
-region="eu-west-1"
+region = "eu-west-1"

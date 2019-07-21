@@ -50,4 +50,3 @@ variable "environment" {
   type    = string
   default = "M"
 }
-
