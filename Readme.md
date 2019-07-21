@@ -1,7 +1,7 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-snstoslack [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
+# terraform-aws-snstoslack [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
 
 This module connects sns to slack.
 
