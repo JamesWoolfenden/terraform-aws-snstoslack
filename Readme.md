@@ -79,7 +79,6 @@ Check out these related projects.
 
 File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-snstoslack/issues).
 
-
 ## Contributing
 
 ### Bug Reports & Feature Requests
