@@ -22,12 +22,10 @@ resource "aws_lambda_function" "notify_slack" {
 
   lifecycle {
     ignore_changes = [
-      "filename",
-      "last_modified",
+      filename,
+      last_modified,
     ]
   }
 
-  tags = merge(var.common_tags,
-    map("Name", "${var.environment}-MGNT-SLACK-LAMBDA")
-  )
+  tags = var.common_tags
 }
