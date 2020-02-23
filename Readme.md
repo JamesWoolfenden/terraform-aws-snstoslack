@@ -1,9 +1,14 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-snstoslack [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
+# terraform-aws-snstoslack
 
-This module connects sns to slack.
+[![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-snstoslack)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
+
+This module connects SNS to Slack.
 
 ---
 
@@ -37,21 +42,29 @@ Do not abuse this power pls.
 ```cli
  aws-vault exec test --  aws cloudwatch set-alarm-state --alarm-name "JenkinsCPUMaxout" --state-value ALARM --state-reason "I LIKE SHOUTING"
 ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| archive | n/a |
+| aws | n/a |
+| null | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags |  | map | n/a | yes |
-| create | Whether to create all resources | string | `"true"` | no |
-| create\_sns\_topic | Whether to create new SNS topic | string | `"true"` | no |
-| environment |  | string | `"M"` | no |
-| lambda\_function\_name | The name of the Lambda function to create | string | `"notify_slack"` | no |
-| slack\_channel | The name of the channel in Slack for notifications | string | n/a | yes |
-| slack\_emoji | A custom emoji that will appear on Slack messages | string | `":aws:"` | no |
-| slack\_username | The username that will appear on Slack messages | string | n/a | yes |
-| slack\_webhook\_url | The URL of Slack webhook | string | n/a | yes |
-| sns\_topic\_name | The name of the SNS topic to create | string | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| common\_tags | n/a | `map` | n/a | yes |
+| create | Whether to create all resources | `string` | `true` | no |
+| create\_sns\_topic | Whether to create new SNS topic | `string` | `true` | no |
+| environment | n/a | `string` | `"M"` | no |
+| lambda\_function\_name | The name of the Lambda function to create | `string` | `"notify_slack"` | no |
+| slack\_channel | The name of the channel in Slack for notifications | `string` | n/a | yes |
+| slack\_emoji | A custom emoji that will appear on Slack messages | `string` | `":aws:"` | no |
+| slack\_username | The username that will appear on Slack messages | `string` | n/a | yes |
+| slack\_webhook\_url | The URL of Slack webhook | `string` | n/a | yes |
+| sns\_topic\_name | The name of the SNS topic to create | `string` | n/a | yes |
 
 ## Outputs
 
@@ -87,7 +100,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 
 ## License
 
@@ -114,13 +127,11 @@ under the License.
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage]
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
