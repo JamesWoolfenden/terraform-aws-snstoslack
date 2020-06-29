@@ -43,6 +43,10 @@ Do not abuse this power pls.
  aws-vault exec test --  aws cloudwatch set-alarm-state --alarm-name "JenkinsCPUMaxout" --state-value ALARM --state-reason "I LIKE SHOUTING"
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
 ## Providers
 
 | Name | Version |
@@ -54,7 +58,7 @@ Do not abuse this power pls.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | common\_tags | n/a | `map` | n/a | yes |
 | create | Whether to create all resources | `string` | `true` | no |
 | create\_sns\_topic | Whether to create new SNS topic | `string` | `true` | no |
@@ -70,13 +74,8 @@ Do not abuse this power pls.
 
 | Name | Description |
 |------|-------------|
-| lambda\_iam\_role\_arn | The ARN of the IAM role used by Lambda function |
-| lambda\_iam\_role\_name | The name of the IAM role used by Lambda function |
-| notify\_slack\_lambda\_function\_arn | The ARN of the Lambda function |
-| notify\_slack\_lambda\_function\_invoke\_arn | The ARN to be used for invoking Lambda function from API Gateway |
-| notify\_slack\_lambda\_function\_last\_modified | The date Lambda function was last modified |
-| notify\_slack\_lambda\_function\_name | The name of the Lambda function |
-| notify\_slack\_lambda\_function\_version | Latest published version of your Lambda function |
+| lambda\_iam\_role | The IAM role used by Lambda function |
+| notify\_slack\_lambda | The Lambda function |
 | this\_slack\_topic\_arn | The ARN of the SNS topic from which messages will be sent to Slack |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
@@ -108,8 +107,8 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
-[linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-snstoslack&url=https://github.com/jameswoolfenden/terraform-aws-snstoslack
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-snstoslack&url=https://github.com/jameswoolfenden/terraform-aws-snstoslack

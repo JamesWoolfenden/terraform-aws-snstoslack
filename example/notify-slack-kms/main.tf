@@ -10,7 +10,7 @@ variable "kms_key_arn" {
 # https://www.terraform.io/docs/state/sensitive-data.html
 data "aws_kms_ciphertext" "slack_url" {
   plaintext = "https://hooks.slack.com/services/AAA/BBB/CCC"
-  key_id    = "${var.kms_key_arn}"
+  key_id    = var.kms_key_arn
 }
 
 module "notify_slack" {
@@ -18,19 +18,19 @@ module "notify_slack" {
 
   sns_topic_name = "slack-topic"
 
-  slack_webhook_url = "${data.aws_kms_ciphertext.slack_url.ciphertext_blob}"
+  slack_webhook_url = data.aws_kms_ciphertext.slack_url.ciphertext_blob
   slack_channel     = "aws-notification"
   slack_username    = "reporter"
 
   # Option 1
-  //   kms_key_arn = "${aws_kms_key.this.arn}"
+  //   kms_key_arn = aws_kms_key.this.arn
 
 
   # Option 2
-  //  kms_key_arn = "${data.aws_kms_alias.this.target_key_arn}"
+  //  kms_key_arn = data.aws_kms_alias.this.target_key_arn
 
   # Option 3
-  kms_key_arn         = "${var.kms_key_arn}"
+  kms_key_arn         = var.kms_key_arn
   create_with_kms_key = true
-  common_tags         = "${var.common_tags}"
+  common_tags         = var.common_tags
 }
