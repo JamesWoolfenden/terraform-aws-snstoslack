@@ -20,6 +20,10 @@ resource "aws_lambda_function" "notify_slack" {
     }
   }
 
+  tracing_config {
+    mode = "Active"
+  }
+
   lifecycle {
     ignore_changes = [
       filename,
