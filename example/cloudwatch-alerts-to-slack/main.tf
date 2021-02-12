@@ -20,7 +20,7 @@ resource "aws_kms_alias" "this" {
 # https://www.terraform.io/docs/state/sensitive-data.html
 data "aws_kms_ciphertext" "slack_url" {
   plaintext = "https://hooks.slack.com/services/AAA/BBB/CCC"
-  key_id    = "${aws_kms_key.this.arn}"
+  key_id    = aws_kms_key.this.arn
 }
 
 module "notify_slack" {

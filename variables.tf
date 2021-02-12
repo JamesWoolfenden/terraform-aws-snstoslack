@@ -43,7 +43,7 @@ variable "slack_emoji" {
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }
 
 variable "environment" {

@@ -61,7 +61,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | n/a | `map` | n/a | yes |
+| common\_tags | n/a | `map(any)` | n/a | yes |
 | create | Whether to create all resources | `string` | `true` | no |
 | create\_sns\_topic | Whether to create new SNS topic | `string` | `true` | no |
 | environment | n/a | `string` | `"M"` | no |
