@@ -1,4 +1,8 @@
 resource "aws_lambda_function" "notify_slack" {
+  # checkov:skip=CKV_AWS_115: ADD REASON
+  # checkov:skip=CKV_AWS_116: ADD REASON
+  # checkov:skip=CKV_AWS_117: ADD REASON
+
   count = var.create
 
   filename = data.archive_file.notify_slack.0.output_path
@@ -28,6 +32,7 @@ resource "aws_lambda_function" "notify_slack" {
     ignore_changes = [
       filename,
       last_modified,
+      tags,
     ]
   }
 
