@@ -5,4 +5,5 @@ module "notify_slack" {
   slack_channel     = "aws-notification"
   slack_username    = "reporter"
   common_tags       = var.common_tags
+  kms_key_id        = aws_kms_key.example.arn
 }

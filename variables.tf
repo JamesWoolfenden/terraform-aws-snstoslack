@@ -50,3 +50,8 @@ variable "environment" {
   type    = string
   default = "M"
 }
+
+variable "kms_key_id" {
+  type        = string
+  description = "The ARN of you CMK"
+}

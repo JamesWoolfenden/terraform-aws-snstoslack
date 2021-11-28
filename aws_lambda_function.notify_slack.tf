@@ -5,7 +5,7 @@ resource "aws_lambda_function" "notify_slack" {
 
   count = var.create
 
-  filename = data.archive_file.notify_slack.0.output_path
+  filename = "${path.module}/functions/notify_slack.zip"
 
   function_name = var.lambda_function_name
 
@@ -24,6 +24,8 @@ resource "aws_lambda_function" "notify_slack" {
     }
   }
 
+  kms_key_arn = var.kms_key_id
+
   tracing_config {
     mode = "Active"
   }
@@ -35,6 +37,10 @@ resource "aws_lambda_function" "notify_slack" {
       tags,
     ]
   }
+
+  depends_on = [
+    data.archive_file.notify_slack
+  ]
 
   tags = var.common_tags
 }
