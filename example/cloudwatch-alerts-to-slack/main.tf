@@ -7,6 +7,7 @@ variable "kms_key_arn" {
 }
 
 resource "aws_kms_key" "this" {
+  # checkov:skip=CKV2_AWS_64: For example only, key policy managed via IAM
   description         = "KMS key for notify-slack test"
   enable_key_rotation = true
 }
