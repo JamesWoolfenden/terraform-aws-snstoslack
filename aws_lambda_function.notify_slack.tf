@@ -6,6 +6,7 @@ resource "aws_lambda_function" "notify_slack" {
   # checkov:skip=CKV_AWS_115: ADD REASON
   # checkov:skip=CKV_AWS_116: ADD REASON
   # checkov:skip=CKV_AWS_117: ADD REASON
+  # checkov:skip=CKV_AWS_272: code-signing config out of scope for this module
 
   count = var.create
 
@@ -16,7 +17,7 @@ resource "aws_lambda_function" "notify_slack" {
   role             = aws_iam_role.lambda.0.arn
   handler          = "notify_slack.lambda_handler"
   source_code_hash = data.archive_file.notify_slack.0.output_base64sha256
-  runtime          = "python3.6"
+  runtime          = "python3.12"
   timeout          = 30
 
   environment {

@@ -1,13 +1,11 @@
 # terraform-aws-snstoslack
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-snstoslack.svg)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-snstoslack.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-snstoslack/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-snstoslack/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-snstoslack&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-snstoslack/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-snstoslack&benchmark=INFRASTRUCTURE+SECURITY)
 
 This module connects SNS to Slack.
 
@@ -52,7 +50,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
@@ -63,7 +61,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_role.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_lambda_function.notify_slack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
@@ -78,7 +76,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
 | <a name="input_create"></a> [create](#input\_create) | Whether to create all resources | `number` | `1` | no |
 | <a name="input_create_sns_topic"></a> [create\_sns\_topic](#input\_create\_sns\_topic) | Whether to create new SNS topic | `number` | `1` | no |
@@ -94,7 +92,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_lambda_iam_role"></a> [lambda\_iam\_role](#output\_lambda\_iam\_role) | The IAM role used by Lambda function |
 | <a name="output_notify_slack_lambda"></a> [notify\_slack\_lambda](#output\_notify\_slack\_lambda) | The Lambda function |
 | <a name="output_this_slack_topic_arn"></a> [this\_slack\_topic\_arn](#output\_this\_slack\_topic\_arn) | The ARN of the SNS topic from which messages will be sent to Slack |
